@@ -1,0 +1,14 @@
+%YAML 1.1
+---
+- name: Change password (on description field of ETH-14-255-2)
+  ansible.netcommon.netconf_config:
+    target: running
+    content:
+      config:
+        "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0"
+        interfaces:
+          "@xmlns": "urn:ietf:params:xml:ns:yang:ietf-interfaces"
+          interface:
+            name: ETH-14-255-2
+            description: The password is {{ password }}
+...
