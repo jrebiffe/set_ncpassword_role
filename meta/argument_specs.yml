@@ -1,0 +1,21 @@
+%YAML 1.1
+---
+argument_specs:
+  # roles/myapp/tasks/main.yml entry point
+  main:
+
+    short_description: >
+      As a demonstration of NETCONF for Microwave, this Ansible role 
+      change the description of ETH-14-255-2, to mimic a password change.
+      **Not intented to provide real usage.**
+
+    author: Jean Rebiffe
+
+    options:
+      password:
+        type: str
+        required: true
+        description: >
+          Set the user password.
+          Example: "NotSoSecure123*".
+...
